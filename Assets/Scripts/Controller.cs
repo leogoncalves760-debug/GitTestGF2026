@@ -116,8 +116,6 @@ public class Controller : MonoBehaviour
 
         animator.SetFloat("Speed", currentSpeed);
         animator.SetBool("isSprinting", sprintingNow);
-        animator.SetTrigger("Attack");
-        
     }
     
     void OnCollisionEnter(Collision collision)
