@@ -4065,7 +4065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618283145729685746, guid: ff63cd798a7661d4c846fe4d01ef4d3f, type: 3}
       propertyPath: isSprinting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1618283145729685746, guid: ff63cd798a7661d4c846fe4d01ef4d3f, type: 3}
       propertyPath: cameraTransform

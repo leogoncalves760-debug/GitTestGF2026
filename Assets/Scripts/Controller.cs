@@ -10,7 +10,6 @@ public class Controller : MonoBehaviour
 
     [SerializeField] private float sprintSpeed = 8f;
     [SerializeField] private bool isSprinting;
-    [SerializeField] private bool isAttacking;
     [SerializeField] private bool sprintingNow;
 
     private Animator animator;
@@ -67,6 +66,7 @@ public class Controller : MonoBehaviour
             animator.SetTrigger("Attack");
         }
     }
+    
 
     void FixedUpdate()
     {
@@ -81,7 +81,7 @@ public class Controller : MonoBehaviour
 
         Vector3 movement = forward * moveInput.y + right * moveInput.x;
 
-        sprintingNow = isSprinting && moveInput.y > 0.1f && !isAttacking;
+        sprintingNow = isSprinting && moveInput.y > 0.1f;
        
         Vector3 velocity = rb.linearVelocity;
 
@@ -116,6 +116,7 @@ public class Controller : MonoBehaviour
 
         animator.SetFloat("Speed", currentSpeed);
         animator.SetBool("isSprinting", sprintingNow);
+        animator.SetTrigger("Attack");
         
     }
     
